@@ -1,3 +1,3 @@
 # Maintenance template
 ###### Framework
-vite.dev/
+https://vite.dev/
