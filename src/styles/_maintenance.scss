@@ -32,20 +32,20 @@ body {
   flex-direction: column;
 
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
 
   @include media-query("small"){
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   @include media-query("medium"){
-    font-size: 3rem;
-  }
-  @include media-query("large"){
     font-size: 4rem;
   }
-  @include media-query("x-large"){
+  @include media-query("large"){
     font-size: 5rem;
+  }
+  @include media-query("x-large"){
+    font-size: 6rem;
   }
   h1{
     line-height: 90%;
@@ -61,25 +61,25 @@ body {
     margin-block-start: .3rem;
     text-decoration: none;
     color:$gray;
-    font-size:1.2rem;
+    font-size:1.5rem;
     font-weight: 200;
     width: fit-content;
     
     @include media-query("small"){
     margin-block-start: .5rem;
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
     @include media-query("medium"){
     margin-block-start: .7rem;
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
     @include media-query("large"){
     margin-block-start: .9rem;
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
     @include media-query("x-large"){
     margin-block-start: 1.1rem;
-      font-size: 3rem;
+      font-size: 3.5rem;
     }
     &:hover{
       color:$sunrise;
