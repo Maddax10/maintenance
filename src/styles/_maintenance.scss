@@ -1,0 +1,80 @@
+$black: #212121;
+$white: #f0f0f0;
+$gray : #616161;
+$sunrise: #ffa700;
+
+$breakpoints: (
+  "small": 26em,
+  "medium": 40em,
+  "large": 60rem,
+  "x-large": 80rem,
+);
+@mixin media-query($breakpoint){
+  $result : map-get($breakpoints, $breakpoint);
+  @media all and (min-width: $result){
+    @content;
+  }
+}
+body {
+  font-family: "Raleway";
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $black;
+  user-select:none;
+}
+.maintenance {
+  transition:ease .3s;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1rem;
+
+  @include media-query("small"){
+    font-size: 2rem;
+  }
+
+  @include media-query("medium"){
+    font-size: 3rem;
+  }
+  @include media-query("large"){
+    font-size: 4rem;
+  }
+  @include media-query("x-large"){
+    font-size: 5rem;
+  }
+  h1{
+    line-height: 90%;
+  }
+  h1:nth-child(1) {
+    color: white;
+  }
+  h1:nth-child(2) {
+    color: $sunrise;
+  }
+  a{
+    transition: all .2s;
+    margin-block-start: 1rem;
+    text-decoration: none;
+    color:$gray;
+    font-size:.9rem;
+    font-weight: 200;
+    @include media-query("small"){
+      font-size: 1.5rem;
+    }
+    @include media-query("medium"){
+      font-size: 2rem;
+    }
+    @include media-query("large"){
+      font-size: 2.5rem;
+    }
+    @include media-query("x-large"){
+      font-size: 3rem;
+    }
+    &:hover{
+      color:$sunrise;
+    }
+  }
+}
