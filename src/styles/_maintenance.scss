@@ -4,9 +4,9 @@ $gray : #616161;
 $sunrise: #ffa700;
 
 $breakpoints: (
-  "small": 26em,
-  "medium": 40em,
-  "large": 60rem,
+  "small": 30em,
+  "medium": 48em,
+  "large": 64rem,
   "x-large": 80rem,
 );
 @mixin media-query($breakpoint){
@@ -32,7 +32,7 @@ body {
   flex-direction: column;
 
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.5rem;
 
   @include media-query("small"){
     font-size: 2rem;
@@ -61,7 +61,7 @@ body {
     margin-block-start: .3rem;
     text-decoration: none;
     color:$gray;
-    font-size:.9rem;
+    font-size:1.2rem;
     font-weight: 200;
     width: fit-content;
     
